@@ -1021,7 +1021,7 @@ def split(pattern, string, int maxsplit=0):
     """
     return compile(pattern).split(string, maxsplit)
 
-def sub(pattern, repl, string, int count=0):
+def sub(pattern, repl, string, int count=0, int flags=0):
     """
     Return the string obtained by replacing the leftmost
     non-overlapping occurrences of the pattern in string by the
@@ -1030,9 +1030,9 @@ def sub(pattern, repl, string, int count=0):
     a callable, it's passed the match object and must return
     a replacement string to be used.
     """
-    return compile(pattern).sub(repl, string, count)
+    return compile(pattern, flags).sub(repl, string, count)
 
-def subn(pattern, repl, string, int count=0):
+def subn(pattern, repl, string, int count=0, int flags=):
     """
     Return a 2-tuple containing (new_string, number).
     new_string is the string obtained by replacing the leftmost
@@ -1043,7 +1043,7 @@ def subn(pattern, repl, string, int count=0):
     If it is a callable, it's passed the match object and must
     return a replacement string to be used.
     """
-    return compile(pattern).subn(repl, string, count)
+    return compile(pattern, flags).subn(repl, string, count)
 
 _alphanum = {}
 for c in 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ01234567890':
