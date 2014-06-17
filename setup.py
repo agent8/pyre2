@@ -79,8 +79,8 @@ def main():
         long_description=get_long_description(),
         author=get_authors(),
         license="New BSD License",
-        author_email = "mike@axiak.net",
-        url = "http://github.com/axiak/pyre2/",
+        author_email = "waiting@easilydo.com",
+        url = "http://github.com/agent8/pyre2/",
         ext_modules = [
             Extension(
                 "re2",
