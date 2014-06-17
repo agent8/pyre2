@@ -1014,7 +1014,7 @@ def findall(pattern, string, int flags=0):
     """
     return compile(pattern, flags).findall(string)
 
-def split(pattern, string, int maxsplit=0):
+def split(pattern, string, int maxsplit=0, int flags=0):
     """
     Split the source string by the occurrences of the pattern,
     returning a list containing the resulting substrings.
@@ -1032,7 +1032,7 @@ def sub(pattern, repl, string, int count=0, int flags=0):
     """
     return compile(pattern, flags).sub(repl, string, count)
 
-def subn(pattern, repl, string, int count=0, int flags=):
+def subn(pattern, repl, string, int count=0, int flags=0):
     """
     Return a 2-tuple containing (new_string, number).
     new_string is the string obtained by replacing the leftmost
